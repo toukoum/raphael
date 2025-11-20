@@ -91,8 +91,15 @@ export default function RootLayout({
           inter.variable
         )}
       >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
           <main className="flex min-h-screen flex-col">{children}</main>
           <Toaster />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
