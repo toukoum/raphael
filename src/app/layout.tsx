@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
-import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
@@ -103,7 +102,6 @@ export default function RootLayout({
           <main className="flex min-h-screen flex-col">{children}</main>
           <Toaster />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );
